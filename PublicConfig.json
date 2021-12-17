@@ -5,7 +5,7 @@
         "fake": 7,
         "join": {
             "enabled": false,
-            "messageCorrect": "{member:mention} just joined and was invited by {inviter:username}**   who now has **{invites} invites** !",
+            "messageCorrect": "{member:mention} just joined and was invited by **{inviter:username}**   who now has **{invites} invites** !",
             "messageUnknown": "{member:mention} just joined, unable to trace who invited him!",
             "messageBot": "{member:mention} has joined via l'OAuth flow !",
             "messageVanity": "{member:mention} has joined using vanity link ! (**{code}**)",
