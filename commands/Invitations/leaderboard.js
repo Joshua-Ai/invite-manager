@@ -19,16 +19,16 @@ module.exports.run = async (client, message, args) => {
 
     message.channel.send(new Discord.MessageEmbed()
         .setColor('RANDOM')
-        .setTitle('Leaderboard de ' + message.guild.name)
-        .setDescription(`Classement du serveur ${message.member.guild.name}
+        .setTitle('Leaderboard of ' + message.guild.name)
+        .setDescription(`Invites leaderboard of ${message.member.guild.name}
         
-:white_check_mark: Invitations réelles
-:infinity: Toutes invitations comprises
-:sparkles: Invitations bonus
-:poop: Fausses invitations (compte trop récent)
-:x: Invités partis
+:white_check_mark: Real invites
+:infinity: Total invites
+:sparkles: Bonus invites
+:poop: Fakes
+:x: Leaves
 ${leaderboardArray}`)
         .setTimestamp()
-        .setFooter(`Demandé par ${message.member.user.tag}`)
+        .setFooter(`Demanded by ${message.member.user.tag}`)
     )
 }
