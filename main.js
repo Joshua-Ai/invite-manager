@@ -1,5 +1,7 @@
 const Discord = require("discord.js")
 const mongoose = require("mongoose")
+const mongoDB = process.env['mongoDB']
+const botToken = process.env['botToken']
 const client = new Discord.Client({
     disableEveryone: true,
     autoReconnect: true,
@@ -8,7 +10,7 @@ const client = new Discord.Client({
     partials: ['MESSAGE', 'CHANNEL', 'GUILD_MEMBER', 'REACTION']
 })
 
-const PrivateConfig = require('./PrivateConfig.json')
+//const PrivateConfig = require('./PrivateConfig.json')
 
 const fs = require('fs')
 client.commands = new Discord.Collection()
@@ -49,12 +51,12 @@ fs.readdir("./events/", (err, f) => {
     console.log(`[+] ${f.length} events chargés`)
 })
 
-mongoose.connect(PrivateConfig.mongoDB, {
+mongoose.connect(mongoDB, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 }).then(() => {
 	console.log("[+] Connexion établie avec la base de données MongoDB")
-	client.login(PrivateConfig.token)
+	client.login(botToken)
 }).catch((err) => {
 	console.log("[+] Impossible de se connecter à la base de données MongoDB. Erreur: "+err)
 })
