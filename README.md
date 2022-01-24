@@ -14,7 +14,7 @@
 
 ## Introduction
 
-⚠️ This project is not finished but it is perfectly functional. Basic features are usable but many more will be coming soon..
+⚠️ This project is not finished but it is perfectly functional. Basic features are usable but many more will be coming soon.
 
 InviteManagerMongoDB is a Discord robot made in Javascript with [Discord.js (v12.5)](https://discord.js.org) and [Mongoose](https://mongoosejs.com/) by FrancisLaTruelle.
 Feel free to add a star ⭐ to the repository to promote the project !
